@@ -1,5 +1,6 @@
+import MediaPlayer from '../player';
 class AutoPlay {
-	run(player) {
+	run(player: MediaPlayer) {
 		player.mute();
 		player.play();
 	}

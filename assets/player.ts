@@ -1,8 +1,10 @@
 class MediaPlayer {
+	media: HTMLMediaElement;
+	plugins: Array<any>;
 	constructor(props) {
 		this.media = props.media;
 		this.plugins = props.plugins || [];
-		this._initPlugins();
+		this.initPlugins();
 	}
 	play() {
 		this.media.play();
@@ -12,7 +14,7 @@ class MediaPlayer {
 		this.media.pause();
 	}
 
-	_initPlugins() {
+	private initPlugins() {
 		this.plugins.forEach((plugin) => {
 			plugin.run(this);
 		});
