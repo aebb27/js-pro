@@ -5,17 +5,18 @@ class AutoPause {
 			threshold: 0.25,
 		});
 		observer.observe(player.media);
+		document.addEventListener('visibilitychange', this.handleVisibilityChange);
 	}
 
 	handleIntersection = (entries) => {
 		entries.forEach((entry) => {
-			console.log(this);
-			if (entry.isIntersecting) {
-				this.player.play();
-			} else {
-				this.player.pause();
-			}
+			entry.isIntersecting ? this.player.play() : this.player.pause();
 		});
+	};
+
+	handleVisibilityChange = () => {
+		const state = document.visibilityState === 'visible';
+		state ? this.player.play() : this.player.pause();
 	};
 }
 
