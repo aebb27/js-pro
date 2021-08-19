@@ -16,6 +16,6 @@ muteBtn.onclick = () => {
 	player.media.muted ? player.unmute() : player.mute();
 };
 
-if ('serviceWorker' in navigator) {
+/* if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').catch((err) => console.error(err));
-}
+} */
