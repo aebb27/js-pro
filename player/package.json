@@ -1,0 +1,16 @@
+{
+	"name": "@aebb27/media-player",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lib/player.js",
+	"scripts": {
+		"build": "tsc src/**/*.ts src/plugins/*.ts src/plugins/**/*.ts --outDir lib",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Ariel Batista <arielbatista37@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^4.3.5"
+	}
+}

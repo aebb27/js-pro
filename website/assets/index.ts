@@ -1,7 +1,7 @@
-import MediaPlayer from './player';
-import AutoPlay from './plugins/auto-play';
-import AutoPause from './plugins/auto-pause';
-import AdsPlugin from './plugins/adds/ad-pulgin';
+import MediaPlayer from '@aebb27/media-player';
+import AutoPlay from '@aebb27/media-player/lib/plugins/auto-play';
+import AutoPause from '@aebb27/media-player/lib/plugins/auto-pause';
+import AdsPlugin from '@aebb27/media-player/lib/plugins/adds/ad-pulgin';
 const playBtn: HTMLElement = document.querySelector('#playButton'),
 	video: HTMLMediaElement = document.querySelector('video'),
 	muteBtn: HTMLElement = document.querySelector('#muteButton');
